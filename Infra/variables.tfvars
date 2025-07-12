@@ -1,0 +1,6 @@
+region          = "#{region}"
+environment     = "#{environment}"
+bucket_name     = "#{bucket_name}"
+app_name        = "#{app_name}"
+current_version = "#{current_version}"
+domain_name     = "#{domain_name}"
