@@ -41,9 +41,9 @@ jobs:
 
         - name: Create Terraform file
           run: |
-            rm -rf Infra/Docs
-            mkdir -p Infra/Docs
-            mv Docs/* Infra/Docs/
+            rm -rf Infra/docs
+            mkdir -p Infra/docs
+            mv docs/* Infra/docs/
             tar -czf Deployment-Terraform.tar.gz -C Infra .
 
         - name: Upload artifact
