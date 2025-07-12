@@ -35,7 +35,7 @@ jobs:
             aws_region: ${{ vars.AWS_REGION }}
             environment: "prod"
             bucket_name: ${{ vars.TERRAFORM_STATE_BUCKET }}
-            app_name: "cv"
+            app_name: "portfolio"
             current_version: 1.0.${{ github.run_number }}
             domain_name: ${{ secrets.WEBSITE_DOMAIN_NAME }}
 
@@ -57,7 +57,7 @@ jobs:
       name: Terraform Deploy
       uses: Somasundar-Projects/Deployments/.github/workflows/terraform.yml@main
       with:
-        app_name: "cv"
+        app_name: "portfolio"
         aws_region: ${{ vars.AWS_REGION }}
         command: ${{ github.event.inputs.run || 'apply' }}
         tfvars_file_path: "variables.tfvars"
